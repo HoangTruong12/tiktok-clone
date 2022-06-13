@@ -26,6 +26,7 @@ import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { UploadIcon, MessageIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -72,7 +73,7 @@ function Header() {
 
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
-            case 'language':
+            case 'language ':
                 break;
             default:
         }
@@ -163,10 +164,11 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChang={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/17937206d75158670a293f5caa5b6dda~c5_100x100.jpeg?x-expires=1655262000&x-signature=JDz7LEPHMnfPmviiTkYS2kc7V2c%3D"
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
+                                // fallback="https://static.fullstack.edu.vn/static/media/f8-icon.7ad2b161d5e80c87e516.png"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
