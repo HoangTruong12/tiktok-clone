@@ -25,6 +25,7 @@ import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { UploadIcon, MessageIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -146,9 +147,13 @@ function Header() {
                                 </button>
                             </Tippy>
 
-                            {/* <button className={cx('action-btn')}>
-                                <FontAwesomeIcon icon={faMessage} />
-                            </button> */}
+                            <button className={cx('action-btn')}>
+                                <UploadIcon />
+                            </button>
+
+                            <button className={cx('action-btn')}>
+                                <MessageIcon />
+                            </button>
                         </>
                     ) : (
                         <>
